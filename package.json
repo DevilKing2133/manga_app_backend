@@ -17,9 +17,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.2",
     "multer": "^1.4.4",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "pg": "^8.7.3"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DevilKing2133/Manga-Reading-App-Mangaaro-.git"
