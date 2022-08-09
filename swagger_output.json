@@ -1,0 +1,503 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "REST API",
+		"description": ""
+	},
+	"host": "localhost:5000",
+	"basePath": "/",
+	"schemes": ["http"],
+	"paths": {
+		"/add/img/{id}": {
+			"patch": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/list": {
+			"get": {
+				"description": "",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/new": {
+			"post": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "body",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"genre": {
+									"example": "any"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/delete/{idx}": {
+			"delete": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "idx",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/delete/{genre}": {
+			"delete": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "genre",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/add/image/{id}": {
+			"patch": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/list/": {
+			"get": {
+				"description": "",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/list/{email}": {
+			"post": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "email",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "slice(7",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "length",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "authorization",
+						"in": "header",
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/getOtherManga": {
+			"get": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "slice(7",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "length",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "authorization",
+						"in": "header",
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/add": {
+			"post": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "slice(7",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "length",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "authorization",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "body",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"example": "any"
+								},
+								"title": {
+									"example": "any"
+								},
+								"img": {
+									"example": "any"
+								},
+								"synopsis": {
+									"example": "any"
+								},
+								"alt": {
+									"example": "any"
+								},
+								"status": {
+									"example": "any"
+								},
+								"genres": {
+									"example": "any"
+								},
+								"authors": {
+									"example": "any"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/delete/{id}": {
+			"delete": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "slice(7",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "length",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "authorization",
+						"in": "header",
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/{email}": {
+			"get": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "email",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "slice(7",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "length",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "authorization",
+						"in": "header",
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/checkemail/{email}": {
+			"get": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "email",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/login": {
+			"post": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "body",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"email": {
+									"example": "any"
+								},
+								"password": {
+									"example": "any"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/register": {
+			"post": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "body",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"password": {
+									"example": "any"
+								},
+								"email": {
+									"example": "any"
+								},
+								"username": {
+									"example": "any"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		},
+		"/update/{email}": {
+			"patch": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "email",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "slice(7",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "length",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "authorization",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "body",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"password": {
+									"example": "any"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/delete/{email}": {
+			"delete": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "email",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "slice(7",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "length",
+						"in": "header",
+						"type": "string"
+					},
+					{
+						"name": "authorization",
+						"in": "header",
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		}
+	}
+}
