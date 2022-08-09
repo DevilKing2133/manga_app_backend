@@ -33,20 +33,20 @@ const upload = multer({
 router.route("/add/image/:id")
      .patch(upload.single("image"), (req, res) => {
           Manga.findOneAndUpdate({ _id: req.params.id },
-          {
-               $set: {
-                    image: req.file.path,
+               {
+                    $set: {
+                         image: req.file.path,
+                    },
                },
-          },
-          { new: true },
-          (err, result) => {
-               if (err) return res.status(500).send(err);
-               const response = {
-                    message: "image added successfully",
-                    data: result,
-               };
-               return res.status(200).send(response);
-          }
+               { new: true },
+               (err, result) => {
+                    if (err) return res.status(500).send(err);
+                    const response = {
+                         message: "image added successfully",
+                         data: result,
+                    };
+                    return res.status(200).send(response);
+               }
           );
      });
 

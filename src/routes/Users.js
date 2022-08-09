@@ -62,7 +62,7 @@ router.route("/login").post((req, res) => {
 router.route("/register").post((req, res) => {
      console.log("inside the register");
      const salt = bcrypt.genSaltSync(10);
-     const hashPassword = bcrypt.hashSync(req.body.password,salt);
+     const hashPassword = bcrypt.hashSync(req.body.password, salt);
      const user = new User({
           email: req.body.email,
           password: hashPassword,

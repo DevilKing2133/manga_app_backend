@@ -5,7 +5,7 @@ const multer = require('multer');
 
 //set storage
 const storage = multer.diskStorage({
-     destination: (req,file,cb) => {
+     destination: (req, file, cb) => {
           cb(null, './uploads');
      },
      filename: (req, file, cb) => {
